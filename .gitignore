@@ -1,0 +1,11 @@
+# Illuminated Cloud (IntelliJ IDEA)
+IlluminatedCloud
+.idea
+.sfdx
+
+# VS Code
+.vscode
+config/
+
+.anonymous.cls
+sfdx-project.json

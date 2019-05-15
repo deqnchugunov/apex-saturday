@@ -1,0 +1,25 @@
+<aura:component>
+    <aura:attribute name="personObj" type="Object" />
+    <aura:attribute name="personList" type="Object[]" />
+    <aura:attribute name="columns" type="Object" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <div class="slds-grid slds-gutters slds-p-top_xx-large">
+            <div class="slds-col"></div>
+            <div class="slds-col">
+                    <div class="slds-box">
+                        <lightning:input name="inFirstName" label="First Name" value="{!v.personObj.firstName}" />
+                        <lightning:input name="inLastName" label="Last Name" value="{!v.personObj.lastName}" />
+                        <lightning:input name="inAge" label="Age" value="{!v.personObj.age}" />
+                        <lightning:input name="inEyeColor" label="Eye Color" value="{!v.personObj.eyeColor}" /> 
+                        <br />
+                        <p>
+                            <lightning:button  variant="brand" label="Add" title="Add Person" onclick="{! c.addPerson }" />
+                        </p>
+                    </div>
+            </div>
+            <div class="slds-col"></div> 
+    </div>
+    <div class="slds-box">
+            <lightning:datatable keyField="firstName" data="{! v.personList }" columns="{! v.columns }" hideCheckboxColumn="true"/>
+  </div>      
+</aura:component>
