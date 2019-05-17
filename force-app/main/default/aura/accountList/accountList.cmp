@@ -1,0 +1,4 @@
+<aura:component controller="AccountController">
+    <aura:attribute name="accounts" type="Account[]" />
+    <aura:method name="loadAccounts" action="{!c.loadAccounts}" />
+</aura:component>
